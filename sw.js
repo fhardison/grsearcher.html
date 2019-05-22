@@ -3,7 +3,7 @@ var VERSION = 'version_01'              // Version of the off-line cache (change
 var CACHE_NAME = APP_PREFIX + VERSION
 
 
-var BARE = "https://jacksonknightly.github.io/greekfromsearcher.html/";
+var BARE = "https://jacksonknightly.github.io/greekformsearcher/";
 var URLS = [
   BARE,
   BARE + 'index.html',
