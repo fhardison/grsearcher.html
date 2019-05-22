@@ -1,9 +1,9 @@
-var APP_PREFIX = 'translucent_'
-var VERSION = 'version_03' // v.3 includes contribution from @mathias expanding event target to entire page
+var APP_PREFIX = 'greekformsearcher_'
+var VERSION = 'version_01' // v.3 includes contribution from @mathias expanding event target to entire page
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [
-  '/translucent/',
-  '/translucent/index.html'
+  '/greekformsearcher/',
+  '/greekformsearcher/index.html'
 ]
 
 // Respond with cached resources
