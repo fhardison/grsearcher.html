@@ -1,7 +1,7 @@
 {
-  "name": "Greek Forms Searcher",
-    "short_name": "GR Forms",
-    "description": "Greek Forms searcher",
+  "name": "Web Community Leaders UK IE",
+    "short_name": "Web Leaders",
+    "description": "Web Community Leaders landing page",
     "lang": "en-GB",
     "start_url": "/",
     "display": "standalone",
@@ -10,7 +10,7 @@
 
  "icons": [
    {
-     "src":"\/icons/apple-icon.png",
+     "src":"\/icons/wcls-logo-512.png",
      "sizes": "512x512",
      "type": "image\/png"
    },
