@@ -1,7 +1,7 @@
 {
   "name": "Koine Greek Forms DB",
     "short_name": "Greek Forms",
-    "description": "Searcheble Koine Greek Forms DB",
+    "description": "Searchable Koine Greek Forms DB",
     "lang": "en-GB",
     "start_url": "/",
     "display": "standalone",
