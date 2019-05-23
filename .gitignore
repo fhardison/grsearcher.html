@@ -1,7 +1,9 @@
 # Logs
 logs
 *.log
-
+*.swp
+*.un~
+*~
 # .app
 translucent-darwin-x64
 
