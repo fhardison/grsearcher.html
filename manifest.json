@@ -2,6 +2,18 @@
   "name": "Greek Form DB Searcher",
     "short_name": "Greek Form DB",
     "description": "Greek Form DB Searcher",
+    "start_url" : "/greekformsearcher/",
     "display": "standalone",
-
+"icons": [
+  {
+    "src": "/greekformsearcher/ic_launcher.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  },
+  {
+    "src": "/greakformsearcher/web_hi_res_512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }
+]
 }
