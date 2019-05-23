@@ -4,6 +4,8 @@
     "description": "Greek Form DB Searcher",
     "start_url" : "/greekformsearcher/",
     "display": "standalone",
+    "theme_color" : "#55ACEE",
+    "background_color": "#F5F4F0",
 "icons": [
   {
     "src": "/greekformsearcher/ic_launcher.png",
