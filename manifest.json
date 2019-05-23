@@ -1,0 +1,10 @@
+{
+  "name": "Greek Form DB Searcher",
+    "short_name": "Greek Form DB",
+    "description": "Greek Form DB Searcher",
+    "lang": "en-GB",
+    "display": "standalone",
+    "theme_color": "#E6E6FA",
+    "background_color": "#E6E6FA"
+
+}
