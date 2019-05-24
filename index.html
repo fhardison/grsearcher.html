@@ -97,9 +97,8 @@
      
   </div>
   <script >
-  if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/greekformsearcher/sw.js', {scope: '/greekformsearcher/'})
-  }
+
+
 
 data = getData();
 
@@ -222,7 +221,44 @@ function sortForms(xs) {
 </div>
 <div id="content">
 </div>
+<div id="notification">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
 	<script>
+
+	 let newWorker;
+
+  // The click event on the notification
+  document.getElementById('reload').addEventListener('click', function(){
+    newWorker.postMessage({ action: 'skipWaiting' });
+  }); 
+	  
+	  
+	 if (navigator.serviceWorker) {
+		 navigator.serviceWorker.register('/greekformsearcher/sw.js', {scope: '/greekformsearcher/'}).then(reg => {
+		 	reg.addEventListener('updatefound', () => {
+				newWorker = reg.installing;
+				newWorker.addEventListener("statechange", () =>  {
+					switch(newWorker.state) {
+						case 'installed':
+							if (navigator.serviceWorker.controller) {
+								let notification = document.getElementById('notification');
+								notification.className = 'show';
+							}
+						
+							break;
+					}
+				});
+			});
+		 });
+		 let refreshing;
+		 navigator.serviceWorker.addEventListener('controllerChange', function() {
+			 if (refreshing) return;
+			 windows.location.reload();
+			 refreshing = true;
+  		});
+	 }
+			 
+
+
 	var sbox = document.getElementById("search-field");
 sbox.addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard

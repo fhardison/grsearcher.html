@@ -1,10 +1,16 @@
 var APP_PREFIX = 'greekformsearcher_'
-var VERSION = 'version_05' // v.3 includes contribution from @mathias expanding event target to entire page
+var VERSION = 'version_06' // v.3 includes contribution from @mathias expanding event target to entire page
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [
   '/greekformsearcher/',
   '/greekformsearcher/index.html'
 ]
+
+self.addEventListener('message', function (event) {
+	if(event.data.action === 'skipWaiting') {
+		self.skipWaiting();
+	}
+});
 
 // Respond with cached resources
 self.addEventListener('fetch', function (e) {
