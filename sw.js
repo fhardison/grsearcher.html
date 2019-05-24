@@ -1,5 +1,5 @@
 var APP_PREFIX = 'greekformsearcher_'
-var VERSION = 'version_06' // v.3 includes contribution from @mathias expanding event target to entire page
+var VERSION = 'version_07' 
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [
   '/greekformsearcher/',
