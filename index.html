@@ -83,6 +83,13 @@
       color: #00144B;
     }
 
+
+    .show {
+    	display:block;
+    }
+    .hide {
+    	display: none;
+    }
     </style>
 </head>
 <body>
@@ -91,6 +98,8 @@
 	#search >  input {width:75%; height: 100%; }
 	#search > button {width: 20%; height: 100%; } 
 	#content {width:100%; padding:1em; height:7%; }
+
+
 </style> 
 <div id="container">
     <h1>Greek Form DB Searcher</h1>
@@ -179,6 +188,7 @@ function displayForm(word) {
 
 	return `<h1>Word Data</h1>${out}`
 }
+
 function displayLemma(word) {
 	out = '<tr><td>Word</td><td>Type</td><td>POS</td><td>Count</td></tr>'
 
@@ -221,14 +231,16 @@ function sortForms(xs) {
 </div>
 <div id="content">
 </div>
-<div id="notification">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
+<div id="notification" class="hide">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
 	<script>
 
 	 let newWorker;
 
   // The click event on the notification
   document.getElementById('reload').addEventListener('click', function(){
-    newWorker.postMessage({ action: 'skipWaiting' });
+  	notification = document.getElementById("notification");
+	  notification.className = "hide";
+	  newWorker.postMessage({ action: 'skipWaiting' });
   }); 
 	  
 	  
